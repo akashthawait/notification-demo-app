@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <title>Notification Demo App -by Akash Thawait</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=" stylesheet" href="./css/custom-style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./js/notification.js"></script>
+</head>
+
+<body>
+    <div>
+        <div class="wrapper">
+            <div class="nav-bar">
+                <ul>
+                    <li class="searchbox-wrapper">
+                        <div class="search-box">
+                            <span class="fa fa-search search-icon"></span>
+                            <input type="text" />
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdowns-wrapper">
+                            <div class="dropdown-container">
+                                <div class="notifications dropdown dd-trigger" onclick="fn.showNotifications()">
+                                    <span class="count animated" id="notifications-count"></span>
+                                    <span class="fa fa-bell-o"></span>
+                                </div>
+                                <div class="dropdown-menu animated" id="notification-dropdown">
+                                    <div class="dropdown-header">
+                                        <span class="triangle"></span>
+                                        <span class="heading">Notifications</span>
+                                        <span class="count" id="dd-notifications-count"></span>
+                                    </div>
+                                    <div class="dropdown-body">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown-container">
+                                <div class="messages dropdown">
+                                    <span class="fa fa-envelope-o"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="user">
+                        <div class="user-options-wrapper">
+                            <div class="user-image">
+                            </div>
+                            <div class="user-options">
+                                <span class="fa fa-chevron-down"></span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="body-image">
+                <div class="instruction animated">Click on the bell to see the demo!</div>
+                <div class="info animated" id="demoInfo">
+                    <ul>
+                        <li>Dummy Polling is called at random intervals ranging from 1s to 5s.</li>
+                        <li>Dropdown shows both read and unread notifications.</li>
+                        <li>On closing the dropdown, all notifications are marked as read.</li>
+                        <li>Dropdowns also display new notifications while it is open.</li>
+                        <li>Current status is maintained even on refresh.</li>
+                        <li>Count on bell is displayed only if it not zero.</li>
+                    </ul>
+                    <div class="ok-btn-wrapper">
+                        <span class="ok-btn" onclick="fn.hideInfo()">
+                              <span class="text">Okay!</span>
+                        <span class="hover-overlay"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                &copy; Akash Thawait
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
